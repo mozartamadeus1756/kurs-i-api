@@ -31,7 +31,7 @@ Nå som vi kan API-er enda litt bedre, kan vi starte på oppsettet !
 ## Hvordan sette opp og bruke en API 
 Her har jeg laget en liten tutorial til hvordan man setter opp **frontend** og kobler til en **api** og lager sitt egne lille proskjekt !!
 
-## Start !! (HTML)
+### Start !! (HTML)
 Opprett en ny mappe, inni mappen lager du tre filer:
 - En `index.html`-fil, her vil vi vise hva API-en gir oss 
 - En `script.js`-fil, der vi setter opp API-en vår 
