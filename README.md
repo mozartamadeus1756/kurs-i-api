@@ -54,7 +54,7 @@ I html filen, lager du en enkel nettside hvor API-en kan printes ut.
 </body>
 ```
 
-## Videre (JavaScript)
+### Videre (JavaScript)
 
 Videre, starter vi på script-et, hvor vi skal sette opp API-en.
 
@@ -108,7 +108,7 @@ Her kan du velge litt selv hva du vil fortsette med. Hvis du trykker [her!](#tip
 
 Ellers så kan du fortsette til noe litt vanskligere hvor vi utforsker noe lignene, bare at vi bruker en backend løsing for API-en vår **(dette kan være veldig relevant til din fremtid som VG2IT elev ..**).
 
-## Et lite profesjonellt fullstack prosjekt 
+### Et lite profesjonellt fullstack prosjekt 
 Så, nå har du kanskje laget og satt opp en enkel API tilkobling, men hvis du har lyst og prøve deg på noe litt mer avasnert og proffesjonelt har jeg laget en liten tutorial her til hvordan man setter opp **frontend** og **backend**, og koble til en **api** får og lager sitt egne lille fullstack proskjektt !!
 
 > Et fullstack proksjekt er et proskjekt som innholder en front-end og en back-end løsning. Front-end er fremsiden, hvor klienten (du, eller jeg) kommer til, og kan trykke på og se. Back-end er det som skjer "bak kulllissene" på en måte, og driver ofte med dataen, logikken og f.eks en API ! 
@@ -127,7 +127,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 nvm install 22
 ```
 
-## Start med frontend 
+### Start med frontend 
 Opprett en ny mappe, inni mappen lager du tre filer:
     En `index.html`-fil 
     En `script.js`-fil, for å lage en endpoint for API-en
@@ -186,7 +186,7 @@ document.getElementById("button").addEventListener("click", function () {
 ```
 Det er all av frontend-en vi trenger, så videre skal vi nå sette opp selve API-en.
 
-## Backend og API tilkobling 
+### Backend og API tilkobling 
 
 Åpne `server.js` scriptet du lagde, fordi det er her vi skal koble til API-en vår.
 
