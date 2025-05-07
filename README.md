@@ -1,5 +1,5 @@
 # Kurs i API !!
-
+Hei, alle sammen. Dette er et kurs og et lite sånn info ark om API, hvordan man setter det opp og alt sånn. under har jeg laget en liten oversikt over alt av ting jeg skal gjøre, så les deg litt opp på API-er, jobb med starts oppgaven også kan du bestemme litt selv hvordan du vil fortsette !! 
 
 - [Kursi i API !!](#Kurs-i-API-!!)
   - [Kjapt, hva er en API?](#kjapt-hva-er-en-api-)
