@@ -266,7 +266,7 @@ Så går du til `index.html` og trykker på GO LIVE, trykk på knappen og se hva
 
 ## Tips og fortsettelse !
 - Hvis du har problemer, kan du se på filene jeg har laget og kopiere inn !! (de skal være 100% rikitge !!)
-- Eller si ifra så kan jeg hjelpe dere 
+- Eller si ifra så kan jeg hjelpe dere (jeg er her)
 
 ## Andre API-er
 - Finn en annen API og skjekk hva som skjer når du bytter ut URL-en med en av disse:
