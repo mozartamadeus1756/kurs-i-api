@@ -21,7 +21,7 @@ Tenk deg at du sitter på en restaurant og ønsker mat. Du trenger ikke gå inn 
 
 Det under er en forklaring på hva vi skal lage, utifra eksempelet:
 
-1. **Bestillingen:** Du bruker en nettside, og trykker på knappen "GET A JOKE!"
+1. **Bestillingen:** Du bruker en nettside, og trykker på knappen "GET A FACT !!"
 2. **Servitør(API):** Nettsiden sender en forespørsel til __[MeowFacts](https://meowfacts.herokuapp.com/)__ gjennom en API
 3. **Kjøkkenet:** __[MeowFacts](https://meowfacts.herokuapp.com/)__ finner frem den dataen du trenger
 4. **Serveringen:** API-en leverer dataen tilbake til nettsiden, som viser det på nettsiden 
@@ -129,9 +129,9 @@ nvm install 22
 
 ### Start med frontend 
 Opprett en ny mappe, inni mappen lager du tre filer:
-    En `index.html`-fil 
-    En `script.js`-fil, for å lage en endpoint for API-en
-    En `server.js`-fil, backend-en der vi lager en GET request 
+- En `index.html`-fil 
+- En `script.js`-fil, for å lage en endpoint for API-en
+- En `server.js`-fil, backend-en der vi lager en GET request 
     
 ```src
 └── kurs-i-api/
@@ -141,7 +141,7 @@ Opprett en ny mappe, inni mappen lager du tre filer:
 ```
 Lag en basic nettside, med en knapp og en `<p>` tag. 
 
-(`<p>`taggen skal være hvor API dataen vises, så lag en id du kaller "punchline" sånn som under ↓).
+`<p>`taggen skal være hvor API dataen vises, så lag en id du kaller "punchline" sånn som under ↓.
 
 ```html
 <body>
