@@ -29,10 +29,10 @@ Det under er en forklaring på hva vi skal lage, utifra eksempelet:
 Nå som vi kan API-er enda litt bedre, kan vi starte på oppsettet !
 
 ## Hvordan sette opp og bruke en API 
-Her har jeg laget en liten tutorial til hvordan man setter opp **frontend** og kobler til en **api** og lager sitt egne lille proskjekt !!
+Her har jeg laget en liten tutorial til hvordan man setter opp **frontend** og kobler til en **api** og lager sitt eget lille proskjekt !!
 
 ### Start !! (HTML)
-Opprett en ny mappe, inni mappen lager du tre filer:
+Opprett en ny mappe i **vscode**, inni mappen lager du to filer:
 - En `index.html`-fil, her vil vi vise hva API-en gir oss 
 - En `script.js`-fil, der vi setter opp API-en vår 
     
@@ -56,9 +56,7 @@ I html filen, lager du en enkel nettside hvor API-en kan printes ut.
 
 ### Videre (JavaScript)
 
-Videre, starter vi på script-et, hvor vi skal sette opp API-en.
-
-Vi starter ved å lage en variabel som vi lagrere faktaen i, og printes ut tilslutt 
+Videre, starter vi på script-et, hvor vi skal sette opp API-en. Vi starter ved å lage en variabel som vi skal lagrere faktaene i, og printes ut tilslutt:
 
 ```js
 let currentFact = ''; //variabel for å lagre faktaen 
@@ -70,7 +68,7 @@ Så, lager vi en `addEventListener` til knappen, får å starte funskjonen når 
 document.querySelector("#button")?.addEventListener("click", fetchFact); 
 ```
 
-Til slutt lager vi en async funksjon, for prosessen til API-en
+Til slutt lager vi en async funksjon, for prosessen til API-en. Og vi setter resten av koden sammen:
 
 ```js
 let currentFact = ''; 
@@ -96,11 +94,11 @@ async function fetchFact() { // en async funksjon
 
 Det er egentlig alt du trenger, da er det bare og kjøre programmet ditt å **klikke knappen !!**
 
-![Run-the-game](image.png)
+![kjør-koden](image-3.png)
 
 Og **BOOMMMM!!!**
 
-![Eksempel](image-2.png) 
+![vise-nettsiden](image-2.png) 
 
 ## Jobbe videre !!
 
@@ -111,10 +109,10 @@ Ellers så kan du fortsette til noe litt vanskligere hvor vi utforsker noe ligne
 ### Et lite profesjonellt fullstack prosjekt 
 Så, nå har du kanskje laget og satt opp en enkel API tilkobling, men hvis du har lyst og prøve deg på noe litt mer avasnert og proffesjonelt har jeg laget en liten tutorial her til hvordan man setter opp **frontend** og **backend**, og koble til en **api** får og lager sitt egne lille fullstack proskjektt !!
 
-> Et fullstack proksjekt er et proskjekt som innholder en front-end og en back-end løsning. Front-end er fremsiden, hvor klienten (du, eller jeg) kommer til, og kan trykke på og se. Back-end er det som skjer "bak kulllissene" på en måte, og driver ofte med dataen, logikken og f.eks en API ! 
+> Et fullstack proksjekt er et proskjekt som innholder en front-end og en back-end løsning. Front-end er fremsiden, hvor klienten (du, eller jeg) kommer til, og kan trykke på og se. Back-end er det som skjer "bak kulllissene", her behandler man dataen, logikken og kjører f.eks en API !
 
 ### Vikitge dependencies (før vi starter) !!
-Last ned brew hvis du ikke har det:
+Last ned brew også node:
 ```bash
 # brew installering 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -139,7 +137,7 @@ Opprett en ny mappe, inni mappen lager du tre filer:
     ├── script.js
     ├── server.js
 ```
-Lag en basic nettside, med en knapp og en `<p>` tag. 
+Lag en basic nettside, med en knapp og en `<p>` tag. Akkurat som vi gjorde over.
 
 `<p>`taggen skal være hvor API dataen vises, så lag en id du kaller "punchline" sånn som under ↓.
 
@@ -154,9 +152,7 @@ Lag en basic nettside, med en knapp og en `<p>` tag.
 
 Videre setter vi opp endepunktet, hvor API-en sender dataen (altså vitsen). 
 
-Får å starte prosessen, må vi koble til knappen vi lagde på index siden.
-
-Først lager vi en funskjon for å skjekke om knappen svarer når vi klikker på den:
+Får å starte prosessen, må vi koble til knappen vi lagde på index siden.Først lager vi en funskjon for å skjekke om knappen svarer når vi klikker på den:
 ```js
 document.getElementById("button").addEventListener("click", function () {
     console.log("Button was pressed");
@@ -226,9 +222,9 @@ app.use(cors());
 
 Etter og ha gjort forarbeidet, er det påtide og sette opp selve API-en !!
 
-I første linjen sender du en GET request til URLEN (under↓)
+Vi sender en GET request til API-en vår, fordi vi vil ha noe tilbake. 
 ```js
-app.get('/', async (req, res) => { // 
+app.get('/', async (req, res) => { // vi skriver '/' for å vise hvor dataen skal sendes 
     try {
         const response  = await fetch('https://icanhazdadjoke.com/', { // API-EN !!!
             headers: {
@@ -239,8 +235,10 @@ app.get('/', async (req, res) => { //
         if (!response.ok) { // skjekker om requesten var velykket 
             throw new Error('Network response was not ok');
         }
+
         const data = await response.json(); // konverter daten til JSON
         res.json({ joke: data.joke }); // sender videre repsonsen til oss !! 
+
     } catch (error) { // error hvis det skjer noen feil :(((
         console.error('Error fetching joke:', error);
         res.status(500).json({ error: 'Failed to fetch joke' });
@@ -260,15 +258,15 @@ app.listen(port, () => { // ser om dataen blir sendt, og sier ifra at serveren r
 # for å starte serveren vår 
 node server.js 
 ```
-**OG BOOM !!** Du er ferdig med oppsettet så nå er det bare og be til gudene om at det fungerer og at vi ikke for noen errors 🙏 🙏 🙏
-
 Så går du til `index.html` og trykker på GO LIVE, trykk på knappen og se hva som skjerr !!
 
-![Eksempel](image-1.png)
+![nettsiden](image-1.png)
 
+**OG BOOM !!** Du er ferdig med oppsettet så nå er det bare og be til gudene om at det fungerer og at vi ikke for noen errors 🙏 🙏 🙏
 
 ## Tips og fortsettelse !
 - Hvis du har problemer, kan du se på filene jeg har laget og kopiere inn !! (de skal være 100% rikitge !!)
+- Eller si ifra så kan jeg hjelpe dere 
 
 ## Andre API-er
 - Finn en annen API og skjekk hva som skjer når du bytter ut URL-en med en av disse:
