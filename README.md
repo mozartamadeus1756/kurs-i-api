@@ -271,8 +271,42 @@ Så går du til `index.html` og trykker på GO LIVE, trykk på knappen og se hva
 ## Andre API-er
 - Finn en annen API og skjekk hva som skjer når du bytter ut URL-en med en av disse:
     - https://api.chucknorris.io/jokes/random → ChuckNorrisJoke-API
+        - Her må du endre på hva slags data du mottar: 
+        ```js
+            const data = await response.json(); 
+            currentFact = data.value;  // right herer !!!
+            document.getElementById("fact-line").textContent = currentFact; 
+        ```
     - https://dog.ceo/api/breeds/image/random → Dog-API (bilder)
+        - Denne kan være litt tricky, men her hvis du vil se bildene må du skrive inn dette også:
+        ```js
+            const data = await response.json(); 
+            currentFact = data.message;  // her, dette må du endre  !! 
+
+            // også dette må du legge til på samme linje rett under !! 
+            const imgElement = document.getElementById("dog-image");
+            if (imgElement) {
+                imgElement.src = currentFacr  ;
+                imgElement.alt = "Random dog image";
+            } else {
+                // Hvis du ikke har et img-element, kan du opprette ett
+                const img = document.createElement("img");
+                img.id = "dog-image";
+                img.src = currentFact;
+                img.alt = "Random dog image";
+                document.getElementById("fact-line").textContent = ""; // Tøm tekstfeltet
+                document.getElementById("fact-line").appendChild(img); // Legg til bildet
+            }
+        ```
     - https://api.kanye.rest → RandomKanyeQuotes-API
+        - Hvis du bruker denne må du endre på denne linjen, til quote i scriptet !!
+        ```js
+            const data = await response.json();
+            currentFact = data.quote; // her !!!
+            document.getElementById("fact-line").textContent = currentFact; 
+        ```
+
+
 
 
 
