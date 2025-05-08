@@ -270,7 +270,6 @@ Så går du til `index.html` og trykker på GO LIVE, trykk på knappen og se hva
 
 ## Andre API-er
 - Finn en annen API og skjekk hva som skjer når du bytter ut URL-en med en av disse:
-    - https://pokeapi.co/api/v2/pokemon/ditto → Pokemon-API 
     - https://api.chucknorris.io/jokes/random → ChuckNorrisJoke-API
     - https://dog.ceo/api/breeds/image/random → Dog-API (bilder)
     - https://api.kanye.rest → RandomKanyeQuotes-API
