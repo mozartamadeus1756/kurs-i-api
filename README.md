@@ -31,6 +31,20 @@ Nå som vi kan API-er enda litt bedre, kan vi starte på oppsettet !
 ## Hvordan sette opp og bruke en API 
 Her har jeg laget en liten tutorial til hvordan man setter opp **frontend** og kobler til en **api** og lager sitt eget lille proskjekt !!
 
+### Vikitge dependencies (før vi starter) !!
+Last ned brew også node:
+```bash
+# brew installering 
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# node installering !
+# først nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
+# så node.js
+nvm install 22
+```
+
 ### Start !! (HTML)
 Opprett en ny mappe i **vscode**, inni mappen lager du to filer:
 - En `index.html`-fil, her vil vi vise hva API-en gir oss 
@@ -110,20 +124,6 @@ Ellers så kan du fortsette til noe litt vanskligere hvor vi utforsker noe ligne
 Så, nå har du kanskje laget og satt opp en enkel API tilkobling, men hvis du har lyst og prøve deg på noe litt mer avasnert og proffesjonelt har jeg laget en liten tutorial her til hvordan man setter opp **frontend** og **backend**, og koble til en **api** får og lager sitt egne lille fullstack proskjektt !!
 
 > Et fullstack proksjekt er et proskjekt som innholder en front-end og en back-end løsning. Front-end er fremsiden, hvor klienten (du, eller jeg) kommer til, og kan trykke på og se. Back-end er det som skjer "bak kulllissene", her behandler man dataen, logikken og kjører f.eks en API !
-
-### Vikitge dependencies (før vi starter) !!
-Last ned brew også node:
-```bash
-# brew installering 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# node installering !
-# først nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-
-# så node.js
-nvm install 22
-```
 
 ### Start med frontend 
 Opprett en ny mappe, inni mappen lager du tre filer:
