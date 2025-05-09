@@ -270,8 +270,7 @@ Så går du til `index.html` og trykker på GO LIVE, trykk på knappen og se hva
 
 ## Andre API-er
 - Finn en annen API og skjekk hva som skjer når du bytter ut URL-en med en av disse:
-    -  → 
-        - 
+
 https://api.chucknorris.io/jokes/random → ChuckNorrisJoke-API
 
 Her må du endre på hva slags data du mottar: 
@@ -282,7 +281,7 @@ Her må du endre på hva slags data du mottar:
 ```
 https://dog.ceo/api/breeds/image/random → Dog-API (bilder)
 
-Denne kan være litt tricky, men her hvis du vil se bildene må du skrive inn dette også:
+Denne kan være litt tricky, men hvis du vil se bildene må du skrive inn dette også:
 ```js
     const data = await response.json(); 
     currentFact = data.message;  // her, dette må du endre  !! 
@@ -303,6 +302,7 @@ Denne kan være litt tricky, men her hvis du vil se bildene må du skrive inn de
     }
 ```
 https://api.kanye.rest → RandomKanyeQuotes-API
+
 Hvis du bruker denne må du endre på denne linjen, til quote i scriptet !!
 ```js
     const data = await response.json();
