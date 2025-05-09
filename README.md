@@ -308,7 +308,6 @@ Så går du til `index.html` og trykker på GO LIVE, trykk på knappen og se hva
 ```
     
 
-Takk for meg <3
 
 
 
