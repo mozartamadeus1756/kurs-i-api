@@ -32,7 +32,7 @@ Nå som vi kan API-er enda litt bedre, kan vi starte på oppsettet !
 Her har jeg laget en liten tutorial til hvordan man setter opp **frontend** og kobler til en **api** og lager sitt eget lille proskjekt !!
 
 ### Vikitge dependencies (før vi starter) !!
-Last ned brew også node:
+Last ned brew og node:
 ```bash
 # brew installering 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
