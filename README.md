@@ -94,11 +94,11 @@ async function fetchFact() { // en async funksjon
 
 Det er egentlig alt du trenger, da er det bare og kjøre programmet ditt å **klikke knappen !!**
 
-![kjør-koden](image-3.png)
+![kjør-koden](images/image-3.png)
 
 Og **BOOMMMM!!!**
 
-![vise-nettsiden](image-2.png) 
+![vise-nettsiden](images/image-2.png) 
 
 ## Jobbe videre !!
 
@@ -260,7 +260,7 @@ node server.js
 ```
 Så går du til `index.html` og trykker på GO LIVE, trykk på knappen og se hva som skjerr !!
 
-![nettsiden](image-1.png)
+![nettsiden](images/image-1.png)
 
 **OG BOOM !!** Du er ferdig med oppsettet så nå er det bare og be til gudene om at det fungerer og at vi ikke for noen errors 🙏 🙏 🙏
 
