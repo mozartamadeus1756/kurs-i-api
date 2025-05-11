@@ -1,5 +1,5 @@
 # Kurs i API !!
-Hei, alle sammen. Dette er et kurs og et lite sånn info ark om API, hvordan man setter det opp og alt sånn. Under har jeg laget en liten oversikt over alt av ting jeg skal gjøre, så les deg litt opp på API-er, jobb med start oppgaven også kan du bestemme litt selv hvordan du vil fortsette !! 
+Hei, alle sammen. Dette er et kurs og et lite sånn infoark om API, hvordan man setter det opp og alt sånn. Under har jeg laget en liten oversikt over alt av ting jeg skal gjøre, så les deg litt opp på API-er, jobb med startoppgaven også kan du bestemme litt selv hvordan du vil fortsette !! 
 
 - [Kursi i API !!](#Kurs-i-API-!!)
   - [Kjapt, hva er en API?](#kjapt-hva-er-en-api-)
@@ -29,18 +29,20 @@ Det under er en forklaring på hva vi skal lage, utifra eksempelet:
 Nå som vi kan API-er enda litt bedre, kan vi starte på oppsettet !
 
 ## Hvordan sette opp og bruke en API 
-Her har jeg laget en liten tutorial til hvordan man setter opp **frontend** og kobler til en **api** og lager sitt eget lille proskjekt !!
+Her har jeg laget en liten tutorial til hvordan man setter opp **frontend** og kobler til en **api** og lager ditt eget lille prosjekt !!
 
-### Vikitge dependencies (før vi starter, last ned hvis du ikke har fra før av) !!
-Last ned brew og node:
+### Viktige dependencies (før vi starter, last ned hvis du ikke har fra før av) !!
+Last ned brew og node i **terminalen**:
 ```bash
 # brew installering 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
+```
+```bash
 # node installering !
 # først nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-
+```
+```bash
 # så node.js
 nvm install 22
 ```
@@ -63,7 +65,7 @@ I html filen, lager du en enkel nettside hvor API-en kan printes ut.
     <button id="button" class="button">GET A FACT !!</button>
     <p id="fact-line"></p>
 
-    <script src="script.js"></script> <!-- husk og koble til script-et -->
+    <script src="script.js"></script> <!-- husk å koble til script-et -->
     
 </body>
 ```
