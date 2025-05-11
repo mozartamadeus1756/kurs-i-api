@@ -92,10 +92,10 @@ let currentFact = '';
 document.querySelector("#button")?.addEventListener("click", fetchFact); 
 async function fetchFact() { // en async funksjon 
   try {
-    console.log("Button was pressed"); // skjekker om knappen responderer 
+    console.log("Button was pressed"); // sjekker om knappen responderer 
     const response = await fetch('https://meowfacts.herokuapp.com/'); // fetch en fakta
     
-    if (!response.ok) { // skjekker om responsen er ok
+    if (!response.ok) { // sjekker om responsen er ok
       throw new Error('Failed to fetch cat fact');
     }
     const data = await response.json(); // konverterer responsen til json
@@ -108,7 +108,7 @@ async function fetchFact() { // en async funksjon
 }
 ```
 
-Det er egentlig alt du trenger, da er det bare og kjøre programmet ditt å **klikke knappen !!**
+Det er egentlig alt du trenger, da er det bare å kjøre programmet ditt og **klikke på knappen !!** (nederst i hjørnet)
 
 ![kjør-koden](images/image-3.png)
 
@@ -120,16 +120,16 @@ Og **BOOMMMM!!!**
 
 Her kan du velge litt selv hva du vil fortsette med. Hvis du trykker [her!](#tips-og-fortsettelse-), kan du bytte API url-en i koden din og bruke andre API-er til nettsiden !! (f.eks. hunde-bilde API ??? )
 
-Ellers så kan du fortsette til noe litt vanskligere hvor vi utforsker noe lignene, bare at vi bruker en backend løsing for API-en vår **(dette kan være veldig relevant til din fremtid som VG2IT elev ..**).
+Ellers så kan du fortsette til noe litt vanskeligere hvor vi utforsker noe lignende, bare at vi bruker en backend-løsing for API-en vår **(dette kan være veldig relevant til din fremtid som VG2IT elev ..**).
 
-### Et lite profesjonellt fullstack prosjekt 
-Så, nå har du kanskje laget og satt opp en enkel API tilkobling, men hvis du har lyst og prøve deg på noe litt mer avansert og proffesjonelt har jeg laget en liten tutorial her til hvordan man setter opp **frontend** og **backend**, og koble til en **api** får og lager sitt egne lille fullstack proskjektt !!
+### Et profesjonellt fullstack prosjekt 
+Så, nå har du kanskje laget og satt opp en enkel API tilkobling, men hvis du har lyst til å prøve deg på noe litt mer avansert og profesjonellt har jeg laget en liten tutorial her til hvordan man setter opp **frontend** og **backend**, og kobler til en **api** for å lage sitt eget lille fullstack prosjekt !!
 
-> Et fullstack proksjekt er et proskjekt som innholder en front-end og en back-end løsning. Front-end er fremsiden, hvor klienten (du, eller jeg) kommer til, og kan trykke på og se. Back-end er det som skjer "bak kulllissene", her behandler man dataen, logikken og kjører f.eks en API !
+> Et fullstack prosjekt er et prosjekt som innholder en front-end og en back-end løsning. Front-end er fremsiden, hvor klienten (du, eller jeg) kommer til, og kan trykke og se. Back-end er det som skjer "bak kullissene", her behandler man dataen, logikken og kjører f.eks en API !
 
 ### Start med frontend 
 Opprett en ny mappe, inni mappen lager du tre filer:
-- En `index.html`-fil 
+- En `index.html`-fil, 
 - En `script.js`-fil, for å lage en endpoint for API-en
 - En `server.js`-fil, backend-en der vi lager en GET request 
     
@@ -154,7 +154,7 @@ Lag en basic nettside, med en knapp og en `<p>` tag. Akkurat som vi gjorde over.
 
 Videre setter vi opp endepunktet, hvor API-en sender dataen (altså vitsen). 
 
-Får å starte prosessen, må vi koble til knappen vi lagde på index siden.Først lager vi en funskjon for å skjekke om knappen svarer når vi klikker på den:
+For å starte prosessen, må vi koble til knappen vi lagde på index-siden. Først lager vi en funskjon for å sjekke om knappen svarer når vi klikker på den:
 ```js
 document.getElementById("button").addEventListener("click", function () {
     console.log("Button was pressed");
@@ -182,19 +182,19 @@ document.getElementById("button").addEventListener("click", function () {
         });
 });
 ```
-Det er all av frontend-en vi trenger, så videre skal vi nå sette opp selve API-en.
+Det er alt av frontend-en vi trenger, så videre setter opp selve API-en.
 
 ### Backend og API tilkobling 
 
 Åpne `server.js` scriptet du lagde, fordi det er her vi skal koble til API-en vår.
 
-Får å få API-en til å fungere, må vi ha noen nødvendige biblioteker:
+For å få API-en til å fungere, må vi ha noen nødvendige biblioteker:
 ```js
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 ```
-Får at de skal fungere i koden, må du dermed skrive disse kommandoene inn i terminalen: 
+Fåor at de skal fungere i koden, må du dermed skrive disse kommandoene inn i terminalen: 
 ```bash
 # express installering 
 npm install express 
@@ -222,9 +222,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());  
 ```
 
-Etter og ha gjort forarbeidet, er det påtide og sette opp selve API-en !!
+Etter å ha gjort forarbeidet, er det på tide å sette opp selve API-en !!
 
-Vi sender en GET request til API-en vår, fordi vi vil ha noe tilbake. (GET = å få noe)
+Vi sender en GET request, fordi vi vil ha noe tilbake. (GET = å få noe)
 ```js
 app.get('/', async (req, res) => { // vi skriver '/' for å vise hvor dataen skal sendes 
     try {
@@ -248,9 +248,9 @@ app.get('/', async (req, res) => { // vi skriver '/' for å vise hvor dataen ska
 });
 ```
 
-Så, vil vi gjerne ha en melding som sier ifra når serveren runner, og API-en fungerer:
+Så, vil vi gjerne ha en melding som sier ifra når serveren kjører, og API-en fungerer:
 ```js
-app.listen(port, () => { // ser om dataen blir sendt, og sier ifra at serveren runner !! 
+app.listen(port, () => { // ser om dataen blir sendt, og sier ifra at serveren kjører !! 
     console.log(`Server running !!`);
   });
 ```
@@ -260,18 +260,18 @@ app.listen(port, () => { // ser om dataen blir sendt, og sier ifra at serveren r
 # for å starte serveren vår 
 node server.js 
 ```
-Så går du til `index.html` og trykker på GO LIVE, trykk på knappen og se hva som skjerr !!
+Så går du til `index.html` og trykker på GO LIVE, trykk på knappen og se hva som skjer !!
 
 ![nettsiden](images/image-1.png)
 
-**OG BOOM !!** Du er ferdig med oppsettet så nå er det bare og be til gudene om at det fungerer og at vi ikke for noen errors 🙏 🙏 🙏
+**OG BOOM !!** Du er ferdig med oppsettet så nå er det bare og be til gudene om at det fungerer og at vi ikke får noen errors 🙏 🙏 🙏
 
 ## Tips og fortsettelse !
-- Hvis du har problemer, kan du se på filene jeg har laget og kopiere inn !! (de skal være 100% rikitge !!)
+- Hvis du har problemer, kan du se på filene jeg har laget og kopiere inn !! (de skal være 100% riktige !!)
 - Eller si ifra så kan jeg hjelpe dere (jeg er her)
 
 ## Andre API-er
-**Finn en annen API og skjekk hva som skjer når du bytter ut URL-en med en av disse:**
+**Finn en annen API og sjekk hva som skjer når du bytter ut URL-en med en av disse:**
 
 **https://api.kanye.rest → RandomKanyeQuotes-API.**
 - Hvis du bruker denne må du endre på denne linjen, til quote i scriptet !!
@@ -310,6 +310,7 @@ Så går du til `index.html` og trykker på GO LIVE, trykk på knappen og se hva
     }
 ```
 
+Håper dette har vært lærerikt, takk for meg <3
     
 
 
