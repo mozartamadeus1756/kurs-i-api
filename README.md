@@ -1,5 +1,5 @@
 # Kurs i API !!
-Hei, alle sammen. Dette er et kurs og et lite sånn info ark om API, hvordan man setter det opp og alt sånn. under har jeg laget en liten oversikt over alt av ting jeg skal gjøre, så les deg litt opp på API-er, jobb med starts oppgaven også kan du bestemme litt selv hvordan du vil fortsette !! 
+Hei, alle sammen. Dette er et kurs og et lite sånn info ark om API, hvordan man setter det opp og alt sånn. Under har jeg laget en liten oversikt over alt av ting jeg skal gjøre, så les deg litt opp på API-er, jobb med start oppgaven også kan du bestemme litt selv hvordan du vil fortsette !! 
 
 - [Kursi i API !!](#Kurs-i-API-!!)
   - [Kjapt, hva er en API?](#kjapt-hva-er-en-api-)
@@ -17,7 +17,7 @@ Hei, alle sammen. Dette er et kurs og et lite sånn info ark om API, hvordan man
 Før vi begynner å se på koden, skal vi se litt på hva en API er for noe.
 
 **Eksempel:**
-Tenk deg at du sitter på en restaurant og ønsker mat. Du trenger ikke gå inn på kjøkkenet og lage maten selv - i stedet gir du bestillingen din til servitøren. Servitøren tar bestillingen din til kjøkkenet, henter maten når den er klar, og bringer den tilbake til bordet ditt.
+Tenk deg at du sitter på en restaurant og er sulten. Du trenger ikke gå inn på kjøkkenet og lage maten selv - i stedet gir du bestillingen din til servitøren. Servitøren tar bestillingen din til kjøkkenet, henter maten når den er klar, og bringer den tilbake til bordet ditt.
 
 Det under er en forklaring på hva vi skal lage, utifra eksempelet:
 
@@ -31,7 +31,7 @@ Nå som vi kan API-er enda litt bedre, kan vi starte på oppsettet !
 ## Hvordan sette opp og bruke en API 
 Her har jeg laget en liten tutorial til hvordan man setter opp **frontend** og kobler til en **api** og lager sitt eget lille proskjekt !!
 
-### Vikitge dependencies (før vi starter) !!
+### Vikitge dependencies (før vi starter, last ned hvis du ikke har fra før av) !!
 Last ned brew og node:
 ```bash
 # brew installering 
@@ -70,7 +70,7 @@ I html filen, lager du en enkel nettside hvor API-en kan printes ut.
 
 ### Videre (JavaScript)
 
-Videre, starter vi på script-et, hvor vi skal sette opp API-en. Vi starter ved å lage en variabel som vi skal lagrere faktaene i, og printes ut tilslutt:
+Videre, starter vi på script-et, hvor vi skal sette opp API-en. Vi starter ved å lage en variabel som vi skal lagre faktaene i, og print ut tilslutt:
 
 ```js
 let currentFact = ''; //variabel for å lagre faktaen 
@@ -116,12 +116,12 @@ Og **BOOMMMM!!!**
 
 ## Jobbe videre !!
 
-Her kan du velge litt selv hva du vil fortsette med. Hvis du trykker [her!](#tips-og-fortsettelse-), kan du bytte API url-en i koden din og bruke andre API-er til nettsiden !! (f.eks. en hunde-bilde API ??? )
+Her kan du velge litt selv hva du vil fortsette med. Hvis du trykker [her!](#tips-og-fortsettelse-), kan du bytte API url-en i koden din og bruke andre API-er til nettsiden !! (f.eks. hunde-bilde API ??? )
 
 Ellers så kan du fortsette til noe litt vanskligere hvor vi utforsker noe lignene, bare at vi bruker en backend løsing for API-en vår **(dette kan være veldig relevant til din fremtid som VG2IT elev ..**).
 
 ### Et lite profesjonellt fullstack prosjekt 
-Så, nå har du kanskje laget og satt opp en enkel API tilkobling, men hvis du har lyst og prøve deg på noe litt mer avasnert og proffesjonelt har jeg laget en liten tutorial her til hvordan man setter opp **frontend** og **backend**, og koble til en **api** får og lager sitt egne lille fullstack proskjektt !!
+Så, nå har du kanskje laget og satt opp en enkel API tilkobling, men hvis du har lyst og prøve deg på noe litt mer avansert og proffesjonelt har jeg laget en liten tutorial her til hvordan man setter opp **frontend** og **backend**, og koble til en **api** får og lager sitt egne lille fullstack proskjektt !!
 
 > Et fullstack proksjekt er et proskjekt som innholder en front-end og en back-end løsning. Front-end er fremsiden, hvor klienten (du, eller jeg) kommer til, og kan trykke på og se. Back-end er det som skjer "bak kulllissene", her behandler man dataen, logikken og kjører f.eks en API !
 
@@ -158,7 +158,7 @@ document.getElementById("button").addEventListener("click", function () {
     console.log("Button was pressed");
 });
 ```
-Dermed lager vi ende punket hvor vi vil at API-en skal sende dataen. 
+Dermed lager vi endepunket hvor vi vil at API-en skal sende dataen. 
 
 ```js
 document.getElementById("button").addEventListener("click", function () {
@@ -205,7 +205,7 @@ npm install cors
 ```
 Så når det er gjort, kan vi starte på oppsettet.
 
-Vi bruker **express** til å lage en ny express-applikasjon, og vi velger hvilke port vi skal sende daten til.
+Vi bruker **express** til å lage en ny express-applikasjon, og vi velger hvilke port vi skal sende daten til. Så vi skriver dermed dette inn i koden vår, under det andre:
 
 ```js
 const app = express();
@@ -222,7 +222,7 @@ app.use(cors());
 
 Etter og ha gjort forarbeidet, er det påtide og sette opp selve API-en !!
 
-Vi sender en GET request til API-en vår, fordi vi vil ha noe tilbake. 
+Vi sender en GET request til API-en vår, fordi vi vil ha noe tilbake. (GET = å få noe)
 ```js
 app.get('/', async (req, res) => { // vi skriver '/' for å vise hvor dataen skal sendes 
     try {
