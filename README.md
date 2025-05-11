@@ -271,6 +271,14 @@ Så går du til `index.html` og trykker på GO LIVE, trykk på knappen og se hva
 ## Andre API-er
 **Finn en annen API og skjekk hva som skjer når du bytter ut URL-en med en av disse:**
 
+**https://api.kanye.rest → RandomKanyeQuotes-API.**
+- Hvis du bruker denne må du endre på denne linjen, til quote i scriptet !!
+```js
+    const data = await response.json();
+    currentFact = data.quote; // her !!!
+    document.getElementById("fact-line").textContent = currentFact; 
+```
+
 **https://api.chucknorris.io/jokes/random → ChuckNorrisJoke-API**
 - Her må du endre på hva slags data du mottar: 
 ```js
@@ -299,13 +307,7 @@ Så går du til `index.html` og trykker på GO LIVE, trykk på knappen og se hva
         document.getElementById("fact-line").appendChild(img); // Legg til bildet
     }
 ```
-**https://api.kanye.rest → RandomKanyeQuotes-API.**
-- Hvis du bruker denne må du endre på denne linjen, til quote i scriptet !!
-```js
-    const data = await response.json();
-    currentFact = data.quote; // her !!!
-    document.getElementById("fact-line").textContent = currentFact; 
-```
+
     
 
 
