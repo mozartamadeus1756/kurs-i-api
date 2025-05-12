@@ -299,7 +299,7 @@ Så går du til `index.html` og trykker på GO LIVE, trykk på knappen og se hva
     // også dette må du legge til på samme linje rett under !! 
     const imgElement = document.getElementById("dog-image");
     if (imgElement) {
-        imgElement.src = currentFacr  ;
+        imgElement.src = currentFact  ;
         imgElement.alt = "Random dog image";
     } else {
         // Hvis du ikke har et img-element, kan du opprette ett
