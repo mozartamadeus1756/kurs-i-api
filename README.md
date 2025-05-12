@@ -198,10 +198,12 @@ Fåor at de skal fungere i koden, må du dermed skrive disse kommandoene inn i t
 ```bash
 # express installering 
 npm install express 
-
+```
+```bash
 # body-parser installering
 npm install body-parser
-
+```
+```bash
 # cors installering 
 npm install cors 
 ```
